@@ -7,6 +7,6 @@ import './styles.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
-        <MirApp title="Hola soy yego" subTitle={123}/>
+        <MirApp title="hola soy goku"/>
     </React.StrictMode>
 )
