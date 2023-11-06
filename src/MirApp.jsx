@@ -14,3 +14,7 @@ export const MirApp = ({title, subTitle}) => {
 MirApp.propTypes = {
   title: PropTypes.string.isRequired //aqui se define el tipado que queremos y si es obligatorio
 }
+
+MirApp.defaultProps = {
+  title: 'No hay titulo'
+}
