@@ -1,20 +1,9 @@
-import PropTypes from 'prop-types';
+import { AppRouter } from './router/AppRouter';
 
-export const MirApp = ({title, subTitle}) => {
-
+export const MirApp = () => {
   return (
     <>
-    <h1>{title}</h1>
-    {/* <code>{JSON.stringify(newMessage)}</code> esta sentencia es para poder imprimir objetos*/}
+        <AppRouter/>
     </>
-    
-  );
-}
-
-MirApp.propTypes = {
-  title: PropTypes.string.isRequired //aqui se define el tipado que queremos y si es obligatorio
-}
-
-MirApp.defaultProps = {
-  title: 'No hay titulo'
+  )
 }
