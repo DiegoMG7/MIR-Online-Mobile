@@ -8,4 +8,11 @@ class IntroProvider extends ChangeNotifier {
     Slide(index: 2),
     Slide(index:3)
   ];
+
+  Future <void> sendUpdate() async {
+
+
+    notifyListeners();
+  }
+
 }

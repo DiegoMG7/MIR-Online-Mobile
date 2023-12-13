@@ -8,7 +8,7 @@ class Slide extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    bool isCurrentIndex = true;
+    bool isCurrentIndex = false;
 
     // ignore: sized_box_for_whitespace
     return Container(

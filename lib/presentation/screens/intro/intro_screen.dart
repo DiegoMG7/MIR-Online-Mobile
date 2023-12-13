@@ -18,21 +18,21 @@ class _IntroSliderCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final introProvider = context.watch<IntroProvider>();
-
+/*
     return PageView.builder(
       itemCount: introProvider.slidesList.length,
       itemBuilder: (context, index) {
-      
         return introProvider.slidesList[index];
       },
-    );
-/*
-    return PageView(  igual funciona pero creo que esta mejor el de arriba, aun hay que revisarlo
+    );*/
+
+    return PageView(
       children: introProvider.slidesList,
       onPageChanged: (index) {
-        currentPageIndex = index;
+        //introProvider.slidesList[index] to fix
+        //que aqui cambie el value bool del iscurrent
         //print(currentPageIndex);
       },
-    );*/
+    );
   }
 }
