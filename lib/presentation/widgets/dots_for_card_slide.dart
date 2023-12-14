@@ -33,20 +33,21 @@ class Dot extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     if (isCurrentDot == true) {
-
       return Container(
         margin: const EdgeInsets.all(25.0),
         height: 20,
         width: 20,
-        decoration:const BoxDecoration(color: Colors.blue, shape: BoxShape.circle),
-        ); 
+        decoration:
+            const BoxDecoration(color: Colors.blue, shape: BoxShape.circle),
+      );
     } else {
       return Container(
         margin: const EdgeInsets.all(25.0),
         height: 20,
         width: 20,
-        decoration:const BoxDecoration(color: Colors.black, shape: BoxShape.circle),
-        ); 
+        decoration:
+            const BoxDecoration(color: Colors.black, shape: BoxShape.circle),
+      );
     }
   }
 }

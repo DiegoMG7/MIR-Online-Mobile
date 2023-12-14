@@ -18,21 +18,28 @@ class _IntroSliderCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final introProvider = context.watch<IntroProvider>();
-/*
-    return PageView.builder(
-      itemCount: introProvider.slidesList.length,
-      itemBuilder: (context, index) {
-        return introProvider.slidesList[index];
-      },
-    );*/
 
     return PageView(
       children: introProvider.slidesList,
-      onPageChanged: (index) {
-        //introProvider.slidesList[index] to fix
-        //que aqui cambie el value bool del iscurrent
-        //print(currentPageIndex);
-      },
     );
+
+/*
+    return PageView.builder(
+      itemBuilder: (context, index) {
+        print(index);
+        //introProvider.sendUpdate(index, activeDot);
+        return introProvider.slidesList[index];
+      },
+    );*/
+    /*
+    return PageView(
+      children: introProvider.slidesList,
+      onPageChanged: (index) {
+        activeDot = true;
+        introProvider.sendUpdate(index, activeDot);
+        print(index);
+      },
+    );*/
+    
   }
 }

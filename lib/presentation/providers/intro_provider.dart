@@ -3,16 +3,12 @@ import 'package:mir_mobile/presentation/widgets/slide.dart';
 
 class IntroProvider extends ChangeNotifier {
   List<Slide> slidesList = [
-    Slide(index: 0),
-    Slide(index: 1),
-    Slide(index: 2),
-    Slide(index:3)
+    const Slide(),
+    const Slide(),
+    const Slide(),
   ];
 
-  Future <void> sendUpdate() async {
-
-
+  Future<void> sendUpdate(int index, bool activeState) async {
     notifyListeners();
   }
-
 }
