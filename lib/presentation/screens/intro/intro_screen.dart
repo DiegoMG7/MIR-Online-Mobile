@@ -20,7 +20,7 @@ class _IntroSliderCard extends StatelessWidget {
     final introProvider = context.watch<IntroProvider>();
 
     return PageView(
-      children: introProvider.slidesList,
+      children: introProvider.slidesList
     );
 
 /*

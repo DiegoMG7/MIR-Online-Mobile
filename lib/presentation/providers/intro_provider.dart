@@ -5,10 +5,11 @@ class IntroProvider extends ChangeNotifier {
   List<Slide> slidesList = [
     const Slide(),
     const Slide(),
-    const Slide(),
   ];
 
-  Future<void> sendUpdate(int index, bool activeState) async {
+  //dot slider que reciba el index y lo cambie en cada slide pero solo sea un dot slider
+
+  Future<void> updateDotSlider(int index, bool activeState) async {
     notifyListeners();
   }
 }
