@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mir_mobile/presentation/providers/intro_provider.dart';
 import 'package:mir_mobile/presentation/screens/intro/intro_screen.dart';
-import 'package:provider/provider.dart';
+import 'package:mir_mobile/config/themes/student_theme.dart';
 
 void main() => runApp(const MyApp());
 
@@ -10,16 +9,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MultiProvider(
-      providers: [
-        ChangeNotifierProvider(create: (_) => IntroProvider())
-      ],
-      child: MaterialApp(
-        title: 'Mironline', 
-        home: Scaffold(
-          body: IntroScreen(),
+    return MaterialApp(
+      title: 'Mironline', 
+      theme: AppTheme().theme(),
+      home: const Scaffold(
+        body: IntroScreen(),
         )
-      ),
-    );
+      );
   }
 }
