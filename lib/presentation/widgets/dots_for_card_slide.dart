@@ -45,7 +45,6 @@ Expanded buildDotSlider(int currentDotIndex, int totalDots, BuildContext context
 
   // ignore: sized_box_for_whitespace
   return Expanded(
-    
     child: Align(
       alignment: const Alignment(0.2, 0.6),
       child: Row(
