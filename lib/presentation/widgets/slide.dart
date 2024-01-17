@@ -28,7 +28,7 @@ class Slide extends StatelessWidget {
             ),
           ),
           Expanded(
-            flex: 1,
+            flex: 2,
             child: Image(image: AssetImage(imagePath))
             ),
           DotsForCardSlide(currentDotIndex: slideIndex, totalDots: totalSlidesNumber),

@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
-
 class DotsForCardSlide extends StatelessWidget {
-
   final int currentDotIndex;
   final int totalDots;
   const DotsForCardSlide({super.key,required this.totalDots,this.currentDotIndex = 0}); // en cero para que la primera slide antes de deslizar tenga el Dot correcto
@@ -21,15 +19,16 @@ class Dot extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.all( 10.0 ),
+      margin: const EdgeInsets.all(10.0),
       height: 20,
       width: 20,
-      decoration:  BoxDecoration(shape: BoxShape.circle, color: dotColor),
+      decoration: BoxDecoration(shape: BoxShape.circle, color: dotColor),
     );
   }
 }
 
 Expanded buildDotSlider(int currentDotIndex, int totalDots, BuildContext context) {
+
   List<Dot> dotsList = [];
   Color dotColor;
 
@@ -43,14 +42,42 @@ Expanded buildDotSlider(int currentDotIndex, int totalDots, BuildContext context
     }
   }
 
+  Visibility isLastSlide(int currentDotIndex, int totalDots) { //para ver si la slide es la ultima en la lista y asi mostrar el boton de Next para avanzar al login screen
+    
+    bool isVisible;
+
+    if (currentDotIndex == (totalDots - 1)) {
+      isVisible = true;
+    } else {
+      isVisible = false;
+    }
+
+    return Visibility(
+      visible: isVisible,
+      child: ElevatedButton(onPressed: () {}, child: const Text('pr')),
+    );
+  }
+
   // ignore: sized_box_for_whitespace
   return Expanded(
-    child: Align(
-      alignment: const Alignment(0.2, 0.6),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: dotsList,
-      ),
+    child: Column(
+      children: [
+        Expanded( //este expanded es para mostrar el row de dots
+          child: Align(
+            alignment: const Alignment(0.2, 0.6),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: dotsList,
+            ),
+          ),
+        ),
+        Expanded(//este expanded es para mostrar el boton de siguiente
+          child: Align(
+            alignment: const Alignment(0.8, 0.3),
+            child: isLastSlide(currentDotIndex, totalDots),
+          ),
+        ),
+      ],
     ),
   );
 }
