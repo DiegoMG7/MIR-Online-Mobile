@@ -13,6 +13,7 @@ class AppTheme {
   ThemeData theme() {
     return ThemeData(
         useMaterial3: true,
+        
         textTheme: const TextTheme(
             displayLarge: TextStyle(
               color: secundaryColor,
