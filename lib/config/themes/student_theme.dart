@@ -6,23 +6,40 @@ const Color secundaryColor = Color(0xFF279CD7);
 const Color mainColor = Color(0xFF852679);
 const Color disabledColor = Color(0xFFCECECE);
 
-// ignore: unused_element
-const List<Color> _colorThemes = [secundaryColor, mainColor, disabledColor];
+//const List<Color> colorThemes = [secundaryColor, mainColor, disabledColor];
 
 class AppTheme {
+
   ThemeData theme() {
+
     return ThemeData(
-        useMaterial3: true,
-        
-        textTheme: const TextTheme(
-            displayLarge: TextStyle(
-              color: secundaryColor,
-              fontSize: 50,
-              fontWeight: FontWeight.bold,
-            ),
-            bodyMedium: TextStyle(
-              color: mainColor,
-              fontSize: 22,
-            )));
+
+      useMaterial3: true,
+      primaryColor: mainColor,
+      
+      textTheme: const TextTheme(
+
+        displayLarge: TextStyle(
+          color: secundaryColor,
+          fontSize: 50,
+          fontWeight: FontWeight.bold,
+          ),
+
+        bodyMedium: TextStyle(
+          color: mainColor,
+          fontSize: 22,
+          ),
+
+        labelLarge: TextStyle(
+          color: Colors.white,
+          fontSize: 22,
+          fontWeight: FontWeight.bold
+        ), 
+          
+      ),
+
+    );
+
   }
+
 }

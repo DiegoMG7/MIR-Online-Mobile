@@ -59,12 +59,14 @@ Expanded buildDotSlider(
     }
 
     return NextMirButton(
+
         btnSize: BtnSize.regular,
         btnVisibility: isVisible,
-        btnText: const Text('Next'),
-        btnColor: Colors.greenAccent,
-        btnIcon: const Icon(Icons.arrow_forward),
-        nameRoute: '/'
+        btnText: Text('Next', style: Theme.of(context).textTheme.labelLarge),
+        btnColor: Theme.of(context).primaryColor,
+        btnIcon: const Icon(Icons.arrow_forward_ios, color: Colors.white,),
+        routePath: '/login'
+        
         );
   }
 
@@ -85,7 +87,7 @@ Expanded buildDotSlider(
         Expanded(
           //este expanded es para mostrar el boton de siguiente
           child: Align(
-            alignment: const Alignment(0.8, 0.3),
+            alignment: const Alignment(0.8, 0.0),
             child: isLastSlide(currentDotIndex, totalDots),
           ),
         ),
