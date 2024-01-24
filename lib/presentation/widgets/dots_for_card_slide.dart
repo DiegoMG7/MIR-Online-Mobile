@@ -4,11 +4,7 @@ import 'package:mir_mobile/presentation/widgets/next_mir_button.dart';
 class DotsForCardSlide extends StatelessWidget {
   final int currentDotIndex;
   final int totalDots;
-  const DotsForCardSlide(
-      {super.key,
-      required this.totalDots,
-      this.currentDotIndex =
-          0}); // en cero para que la primera slide antes de deslizar tenga el Dot correcto
+  const DotsForCardSlide({super.key,required this.totalDots,this.currentDotIndex =0}); // en cero para que la primera slide antes de deslizar tenga el Dot correcto
 
   @override
   Widget build(BuildContext context) {
@@ -32,8 +28,8 @@ class Dot extends StatelessWidget {
   }
 }
 
-Expanded buildDotSlider(
-    int currentDotIndex, int totalDots, BuildContext context) {
+Expanded buildDotSlider(int currentDotIndex, int totalDots, BuildContext context) {
+
   List<Dot> dotsList = [];
   Color dotColor;
 
@@ -66,16 +62,17 @@ Expanded buildDotSlider(
         btnColor: Theme.of(context).primaryColor,
         btnIcon: const Icon(Icons.arrow_forward_ios, color: Colors.white,),
         routePath: '/login'
-        
-        );
+
+    );
+
   }
 
   // ignore: sized_box_for_whitespace
   return Expanded(
     child: Column(
       children: [
-        Expanded(
-          //este expanded es para mostrar el row de dots
+
+        Expanded(//este expanded es para mostrar el row de dots
           child: Align(
             alignment: const Alignment(0.2, 0.6),
             child: Row(
@@ -84,13 +81,14 @@ Expanded buildDotSlider(
             ),
           ),
         ),
-        Expanded(
-          //este expanded es para mostrar el boton de siguiente
+
+        Expanded(//este expanded es para mostrar el boton de siguiente
           child: Align(
             alignment: const Alignment(0.8, 0.0),
             child: isLastSlide(currentDotIndex, totalDots),
           ),
         ),
+        
       ],
     ),
   );

@@ -15,25 +15,28 @@ class Slide extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Column( 
-        children: <Widget>[
-          Padding(
-            padding: const EdgeInsets.fromLTRB(10,40,0,50),
-            child: Text(headerText, style: Theme.of(context).textTheme.displayLarge),
-          ),
-          Expanded(
-            child: Padding(
-              padding: const EdgeInsets.fromLTRB(10,0,10,0),
-              child: Text(bodyText, style: Theme.of(context).textTheme.bodyMedium),
+      child: Container(
+        color: Theme.of(context).canvasColor, //color de fondo definido en el theme
+        child: Column( 
+          children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.fromLTRB(10,40,0,50),
+              child: Text(headerText, style: Theme.of(context).textTheme.displayLarge),
             ),
-          ),
-          Expanded(
-            flex: 2,
-            child: Image(image: AssetImage(imagePath))
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(10,0,10,0),
+                child: Text(bodyText, style: Theme.of(context).textTheme.bodyMedium),
+              ),
             ),
-          DotsForCardSlide(currentDotIndex: slideIndex, totalDots: totalSlidesNumber),
-          ],
-        ),
+            Expanded(
+              flex: 2,
+              child: Image(image: AssetImage(imagePath))
+              ),
+            DotsForCardSlide(currentDotIndex: slideIndex, totalDots: totalSlidesNumber),
+            ],
+          ),
+      ),
     );
   }
 }
