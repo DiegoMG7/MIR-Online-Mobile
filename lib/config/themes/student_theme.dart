@@ -19,6 +19,11 @@ class AppTheme {
       primaryColorLight: secundaryColor,
     
       textTheme: const TextTheme(
+        headlineLarge: TextStyle(
+          color: Colors.white,
+          fontSize: 50,
+          fontWeight: FontWeight.bold,
+        ),
         displayLarge: TextStyle(
           color: secundaryColor,
           fontSize: 50,
