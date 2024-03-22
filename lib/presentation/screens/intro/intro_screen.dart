@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mir_mobile/presentation/widgets/slide.dart';
+import 'package:mir_mobile/presentation/widgets/widgets.dart';
 
 class IntroScreen extends StatelessWidget {
   

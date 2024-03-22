@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mir_mobile/presentation/widgets/next_mir_button.dart';
+import 'package:mir_mobile/presentation/widgets/widgets.dart';
 
 
 class LoginScreen extends StatelessWidget {
